@@ -21,9 +21,21 @@ export default function EntryInput() {
   return <>
   <h1>Posting as {user}</h1>
   <form>
+      {user ? null :
+      
       <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
+      }
       <textarea value={userMessage} onChange={(e) => {setUserMessage(e.target.value)}} placeholder="your message"/>
       <button onClick={handleSubmit}>Submit</button>
+      {user && 
+      
+      <button               
+      onClick={() => {
+          setUser('')
+          setName('')
+      }}>Not {user}?</button>
+      
+      }
       
   </form></>
   ;
