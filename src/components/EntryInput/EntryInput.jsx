@@ -15,7 +15,9 @@ export default function EntryInput() {
     };
 
 
-  return <><div>Entry Input</div><form>
+  return <><div>Entry Input</div>
+  <h1>Posting as {user}</h1>
+  <form>
       <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
       <textarea value={userMessage} onChange={(e) => {setUserMessage(e.target.value)}} placeholder="your message"/>
       <button onClick={handleSubmit}>Submit</button>
