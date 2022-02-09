@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useMessages } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
 
 export default function EntryInput() {
@@ -6,11 +7,12 @@ export default function EntryInput() {
     const [userName, setUserName] = useState('');
     const [userMessage, setUserMessage] = useState('');
     const { user, setUser } = useUser()
+    const { messages, setMessages} = useMessages()
   
   
     const handleSubmit = (e) => {
       e.preventDefault();
-
+      setMessages([...messages, { userName, message: userMessage} ])
       setUser(userName);
       setUserMessage('');
     };
