@@ -10,6 +10,7 @@ export default function EntryInput() {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+
       setUser(userName);
       setUserMessage('');
     };
