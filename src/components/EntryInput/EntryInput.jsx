@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useUser } from '../../context/UserContext';
 
 export default function EntryInput() {
     
     const [userName, setUserName] = useState('');
     const [userMessage, setUserMessage] = useState('');
-    
+    const { user, setUser } = useUser()
   
   
     const handleSubmit = (e) => {
