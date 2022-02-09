@@ -7,18 +7,18 @@ export default function EntryInput() {
     const [userName, setUserName] = useState('');
     const [userMessage, setUserMessage] = useState('');
     const { user, setUser } = useUser()
-    const { messages, setMessages} = useMessages()
+    const { messages, setMessages } = useMessages()
   
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      setMessages([...messages, { userName, message: userMessage} ])
       setUser(userName);
+      setMessages([...messages, { userName, message: userMessage} ])
       setUserMessage('');
     };
 
 
-  return <><div>Entry Input</div>
+  return <>
   <h1>Posting as {user}</h1>
   <form>
       <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
