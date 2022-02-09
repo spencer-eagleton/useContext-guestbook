@@ -22,10 +22,15 @@ export default function EntryInput() {
   <h1>Posting as {user}</h1>
   <form>
       {user ? null :
-      
-      <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
+      <label >
+          Name:
+          <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
+      </label>
       }
+      <label>
+          Message:
       <textarea value={userMessage} onChange={(e) => {setUserMessage(e.target.value)}} placeholder="your message"/>
+      </label>
       <button onClick={handleSubmit}>Submit</button>
       {user && 
       
