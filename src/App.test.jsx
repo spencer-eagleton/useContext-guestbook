@@ -23,12 +23,12 @@ test('input changes value, then button renders input', () => {
     userEvent.type(messageInput, 'hello');
     expect(messageInput.value).toBe('hello');
     
-    const button = screen.getByRole('button')
+    const button = screen.getByRole('button', { name: /submit/i })
     expect(button).toBeInTheDocument();
 
     userEvent.click(button);
 
-    const name = screen.getByText('spencer');
+    const name = screen.getByText(/-spencer/i);
     const message = screen.getByText('hello');
 
     expect(name).toBeInTheDocument();
