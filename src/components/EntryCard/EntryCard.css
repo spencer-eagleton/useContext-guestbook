@@ -9,13 +9,12 @@ p {
 
 h3 {
     font-family: 'Comforter', cursive;
-
 }
+
 li {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     margin: 10px;
-
 }
 
