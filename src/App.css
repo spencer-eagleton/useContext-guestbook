@@ -1,0 +1,24 @@
+
+
+
+.App {
+    height: 800px;
+    width: 75%;
+    margin: auto;
+}
+.App.dark {
+    background-image: url(./assets/brick.jpg);
+    background-size: cover;
+	/* background: #000; */
+
+	color: #fff;
+	transition: 0.3s all;
+}
+
+.App.light {
+    background-image: url(./assets/redbrick.jpg);
+
+	/* background: #fff; */
+	color: #000;
+	transition: 0.3s all;
+}
