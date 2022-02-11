@@ -1,4 +1,24 @@
-body {
+/* body {
     background-image: url(./assets/brick.jpg);
     color: white;
+} */
+
+
+.App {
+    background: #000
+}
+.App.dark {
+    /* background-image: url(./assets/brick.jpg); */
+	background: #000;
+
+	color: #fff;
+	transition: 0.3s all;
+}
+
+.App.light {
+    /* background-image: url(./assets/brick.jpg); */
+
+	background: #fff;
+	color: #000;
+	transition: 0.3s all;
 }
