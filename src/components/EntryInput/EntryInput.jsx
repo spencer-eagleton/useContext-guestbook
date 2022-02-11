@@ -1,3 +1,4 @@
+import './EntryInput.css'
 import { useState } from 'react';
 import { useMessages } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
@@ -19,16 +20,22 @@ export default function EntryInput() {
 
 
   return <>
-  <h1>Posting as {user}</h1>
-  <form>
+  {user && <h1>Tagging as {user}</h1>}
+  {!user && <h1>Tag it up!</h1>}
+  <form> 
       {user ? null :
       <label >
+                 <h4>
+        
           Name:
+        </h4>
           <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
       </label>
       }
       <label>
-          Message:
+          <h4>
+        Message:
+        </h4>
       <textarea value={userMessage} onChange={(e) => {setUserMessage(e.target.value)}} placeholder="your message"/>
       </label>
       <button onClick={handleSubmit}>Submit</button>

@@ -1,7 +1,8 @@
+import './EntryCard.css';
 
 export default function EntryCard({entry}) {
     const { userName, message } = entry
-  return <><h3>{userName}</h3><p>
+  return <><p>
       {message}
-  </p></>;
+  </p><h3>-{userName}</h3></>;
 }

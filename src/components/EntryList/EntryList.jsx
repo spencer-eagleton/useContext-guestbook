@@ -1,3 +1,4 @@
+import './EntryList.css'
 import { useMessages } from "../../context/EntryContext";
 import EntryCard from "../EntryCard/EntryCard";
 
@@ -9,7 +10,7 @@ const { messages } = useMessages()
 
   {messages.map((entry) => {
     return (
-      <li key={`${entry.userName}-${entry.message}`}>
+      <li key={entry.message}>
         <EntryCard entry={entry}/>
 
       </li>
