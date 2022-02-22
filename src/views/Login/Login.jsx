@@ -1,6 +1,12 @@
-
+import './Login.css'
 export default function Login() {
   return (
-    <div>Login</div>
+    <>
+      <h1>Login</h1>
+      <input type="text" placeholder="email"/>
+      <input type="text" placeholder="password"/>
+      <button>login</button>
+    </>
+
   )
 }

@@ -1,9 +1,10 @@
 import './App.css'
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, PrivateRoute } from 'react-router-dom';
 import { EntryProvider } from "./context/EntryContext";
 import { UserProvider } from "./context/UserContext";
 import { useTheme } from "./hooks/useTheme";
 import Home from "./views/Home/Home";
+import Login from "./views/Login/Login";
 
 
 export default function App() {
@@ -16,8 +17,13 @@ export default function App() {
       <Switch>
 
       <UserProvider>
+          <Route path="/login">
+            <Login />
+          </Route>
         <EntryProvider>
-          <Home />
+          <Route exact path="/">
+            <Home />
+          </Route>
         </EntryProvider>
       </UserProvider>
     
