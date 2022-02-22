@@ -7,7 +7,7 @@ export default function EntryInput() {
     
     // const [userName, setUserName] = useState('');
     const [userMessage, setUserMessage] = useState('');
-    const { user: { email }  } = useUser()
+    const { setUser, user: { email }  } = useUser()
     const { messages, setMessages } = useMessages()
     console.log(user);
   
@@ -45,7 +45,7 @@ export default function EntryInput() {
       
       <button               
       onClick={() => {
-          setName('')
+          setUser('')
       }}>Not {email}?</button>
       
       }
