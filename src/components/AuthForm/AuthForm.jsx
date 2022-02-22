@@ -6,8 +6,11 @@ export default function AuthForm() {
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
 
+    const handleSignIn = (e) => {
+        if (email === process.env.AUTH_EMAIL) setUser({ email })
+    } 
   return (
-    <><div>AuthForm</div>
+    <>
     <form>
           <input value={email} onChange={(e) => {setEmail(e.target.value)}} type="text" placeholder="email" />
           <input value={password} onChange={(e) => {setPassword(e.target.value)}}type="password" placeholder="password" />

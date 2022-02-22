@@ -1,11 +1,11 @@
 import './App.css'
-import { BrowserRouter, Switch, Route, PrivateRoute } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { EntryProvider } from "./context/EntryContext";
 import { UserProvider } from "./context/UserContext";
 import { useTheme } from "./hooks/useTheme";
 import Home from "./views/Home/Home";
 import Login from "./views/Login/Login";
-
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -17,13 +17,13 @@ export default function App() {
       <Switch>
 
       <UserProvider>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
         <EntryProvider>
-          <Route exact path="/">
+          <PrivateRoute exact path="/">
             <Home />
-          </Route>
+          </PrivateRoute>
         </EntryProvider>
       </UserProvider>
     
