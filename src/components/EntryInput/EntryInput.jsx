@@ -34,7 +34,7 @@ export default function EntryInput() {
           <input type="text" value={userName} onChange={(e) => {setUserName(e.target.value)}} placeholder="your name"/>
       </label>
       } */}
-      <label>
+      <label htmlFor="Message">
           <h4>
         Message:
         </h4>
