@@ -46,7 +46,7 @@ export default function EntryInput() {
       <button               
       onClick={() => {
           setUser('')
-      }}>Not {email}?</button>
+      }}>Not {email.split('@')[0]}?</button>
       
       }
       

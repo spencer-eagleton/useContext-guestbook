@@ -1,8 +1,10 @@
 import './EntryCard.css';
+import { useUser } from '../../context/UserContext';
 
 export default function EntryCard({entry}) {
-    const { userName, message } = entry
+    const { message } = entry
+    const { user: { email }  } = useUser()
   return <><p>
       {message}
-  </p><h3>-{userName}</h3></>;
+  </p><h3>-{email.split('@')[0]}</h3></>;
 }
